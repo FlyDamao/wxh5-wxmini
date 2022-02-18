@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 20px;
+    }
+    #list{
+      margin-top: 20px;
+      padding: 20px;
+      background-color: cadetblue;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    #list li{
+      margin: 10px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <h1>跳转测试</h1>
+  <ul id="list">
+    <li ><button id="customizeShare">自定义分享</button></li>
+    <li><button id="scanQR">扫码</button></li>
+    <li>
+      <wx-open-launch-weapp id="launch-btn" username="gh_d6b156ad57fa" path="pages/index.html">
+        <script type="text/wxtag-template">
+          <style>.btn { display: flex;align-items: center;width: 100px;height: 100px }</style>
+          <button class="btn">跳转小程序</button>
+      </script>
+      </wx-open-launch-weapp>
+    </li>
+  </ul>
+</body>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./javascripts/wechat-js-sdk.js"></script>
+<script src="./javascripts/jssdk-init.js"></script>
+
+</html>
